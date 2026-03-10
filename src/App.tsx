@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Package, ClipboardList, ArrowRight, Activity, Settings, Database, ExternalLink } from 'lucide-react';
+import { supabase } from './services/supabaseClient';
 
 interface AppCardProps {
   title: string;
@@ -58,6 +59,19 @@ const AppCard: React.FC<AppCardProps> = ({
 };
 
 export default function App() {
+  useEffect(() => {
+    const testConnection = async () => {
+      try {
+        const { error } = await supabase.from('dl_hub_forms').select('id').limit(1);
+        if (error) throw error;
+        console.log('✅ Supabase Connection: SUCCESS (Corporate Hub is connected)');
+      } catch (err: any) {
+        console.error('❌ Supabase Connection: FAILED', err.message);
+      }
+    };
+    testConnection();
+  }, []);
+
   return (
     <div className="min-h-screen bg-stone-50 flex flex-col font-sans">
       {/* Navbar */}

@@ -6,7 +6,10 @@
 
 ```
 knowledge/
-├── plans/          ← Planes de implementación inmutables (YYYY-MM-DD-nombre.md)
+├── plans/          ← Planes de implementación y PLANOS MAESTROS (YYYY-MM-DD-nombre.md)
+│   ├── 2026-03-11-master-proposal-v2.5.md  ← El Blueprint
+│   ├── 2026-03-11-audit-report-v2.5.md     ← La Aprobación
+│   └── 2026-03-12-governance-model-v3.md   ← Las Reglas (Fases)
 ├── brainstorms/    ← Artefactos de lluvia de ideas
 ├── STORY.md        ← Narrativa del Hub (continuación del STORY de ALPRO)
 └── backlog/        ← Pendientes y bugs

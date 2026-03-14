@@ -89,6 +89,12 @@ src/
 **Formato:** `hub-<module>-<verbo>-<recurso>`  
 **Ownership:** Platform Owner crea por defecto. Module Owner propone con revisión.
 
+| Ejemplo | Módulo | Propósito |
+|---------|--------|-----------|
+| `hub-core-create-user` | Core | Creación segura de usuarios con metadatos de Org |
+| `hub-alpro-close-daily` | ALPRO | Lógica pesada de cierre y recálculo de costos |
+| `hub-forms-submit-response` | Forms | Procesamiento de JSONB y auditoría de envío |
+
 ---
 
 ## 6. Triple Barrera: Lazy Loading + PBAC + ErrorBoundary
